@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/api/health)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -X POST 'http://localhost:3000/api/setup?sync=1' -H 'x-setup-key: meghalaya_tourism_super_secret_jwt_key_2024')",
+      "Bash(curl -s \"http://localhost:3000/api/places?limit=100\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Total places: {len\\(d[\\\\\"places\\\\\"]\\)}'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -sv -X POST 'http://localhost:3000/api/setup?sync=1' -H 'x-setup-key: meghalaya_tourism_super_secret_jwt_key_2024')",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s \"http://localhost:3000/api/places?activity=Trekking\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"http://localhost:3000/api/places?activity=Wildlife+safari\")",
+      "Bash(curl -sG https://commons.wikimedia.org/w/api.php --data-urlencode action=query --data-urlencode list=search --data-urlencode 'srsearch=Syntu Meghalaya' --data-urlencode srnamespace=6 --data-urlencode srlimit=10 --data-urlencode format=json)",
+      "Bash(curl -sG https://commons.wikimedia.org/w/api.php --data-urlencode action=query --data-urlencode list=search --data-urlencode 'srsearch=Jaintia Hills lake Meghalaya' --data-urlencode srnamespace=6 --data-urlencode srlimit=5 --data-urlencode format=json)",
+      "Bash(python3 -c \"import docx; print\\('python-docx available'\\)\")",
+      "Bash(pip3 install *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
